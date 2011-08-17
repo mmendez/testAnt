@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Test" basedir=".">
+	<taskdef resource="org/eclipse/jgit/ant/ant-tasks.properties">
+		<classpath>
+			<pathelement location="/home/mmendez/proyectos/testing/testAnt/org.eclipse.jgit-1.0.0.201106090707-r.jar"/>
+			<pathelement location="/home/mmendez/proyectos/testing/testAnt/jsch-0.1.42.jar"/>
+			<pathelement location="/home/mmendez/proyectos/testing/testAnt/org.eclipse.jgit.ant-1.1.0-SNAPSHOT.jar"/>
+		</classpath>
+	</taskdef>
+
+	<target name="push">
+		<git-push-tag src="./" uri="https://mmendez@github.com/mmendez/testAnt.git" />
+	</target>
+</project>
