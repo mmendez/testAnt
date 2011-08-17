@@ -9,6 +9,6 @@
 	</taskdef>
 
 	<target name="push">
-		<git-push-tag src="./" uri="https://mmendez@github.com/mmendez/testAnt.git" />
+		<git-push-tag src="./" uri="https://mmendez@github.com/mmendez/testAnt.git" tags="false" />
 	</target>
 </project>
