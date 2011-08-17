@@ -8,7 +8,25 @@
 		</classpath>
 	</taskdef>
 
+	<macrodef name="git">
+		<attribute name="command" />
+		<attribute name="dir" default="" />
+		<element name="args" optional="true" />
+		<sequential>
+			<echo message="git @{command}" />
+			<exec executable="git" dir="@{dir}">
+				<arg value="@{command}"/>
+				<args/>
+			</exec>
+		</sequential>
+	</macrodef>
+
 	<target name="push">
-		<git-push-tag src="./" uri="https://mmendez@github.com/mmendez/testAnt.git" tags="false" />
+		<git command="push">
+			<args>
+				<arg value="origin"/>
+				<arg value="remote"/>
+			</args>
+		</git>
 	</target>
 </project>
